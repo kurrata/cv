@@ -19,5 +19,11 @@ services:
         build: docker/php
         volumes: 
             - ./backend:/app_b/
+
+    # Used to generate backend api documentation during development
+    swagger-cli:
+        build: docker/swagger-cli
+        volumes: 
+            - ./backend:/app_b/
     
 
