@@ -1,0 +1,15 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  person:
+    $ref: './index.yml#/person'
+  education_history:
+    type: array
+    items:
+      $ref: './index.yml#/education_history'
+  employment_history:
+    type: array
+    items:
+      $ref: './index.yml#/employment_history'

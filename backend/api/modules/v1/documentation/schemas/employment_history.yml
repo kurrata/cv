@@ -1,0 +1,15 @@
+type: object
+properties:
+  id:
+    type: string
+    format: uuid
+  organization:
+    type: string
+  position:
+    type: string
+  from:
+    type: string
+    format: date
+  till:
+    type: string
+    format: date

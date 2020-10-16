@@ -1,0 +1,102 @@
+openapi: 3.0.0
+info:
+  version: 0.1.0
+  title: CV's backend applications api
+  description: |
+    API for CV application that can create & update CV's
+  license:
+    name: GPLv2
+    url: 'https://opensource.org/licenses/gpl-2.0.php'
+paths:
+  /site/ping:
+    get:
+      description: Ping
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+  /cv:
+    get:
+      tags:
+        - CV
+      description: List of cv's
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+    post:
+      tags:
+        - CV
+      description: Create cv
+      requestBody:
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/cv'
+          application/xml:
+            schema:
+              $ref: '#/components/schemas/cv'
+      responses:
+        '200':
+          $ref: '#/components/responses/200'
+components:
+  schemas:
+    cv:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        person:
+          $ref: '#/components/schemas/person'
+        education_history:
+          type: array
+          items:
+            $ref: '#/components/schemas/education_history'
+        employment_history:
+          type: array
+          items:
+            $ref: '#/components/schemas/employment_history'
+    education_history:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        organization:
+          type: string
+        program:
+          type: string
+        from:
+          type: string
+          format: date
+        till:
+          type: string
+          format: date
+    employment_history:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        organization:
+          type: string
+        position:
+          type: string
+        from:
+          type: string
+          format: date
+        till:
+          type: string
+          format: date
+    person:
+      type: object
+      properties:
+        id:
+          type: string
+          format: uuid
+        name:
+          type: string
+        surname:
+          type: string
+  responses:
+    '200':
+      description: Successful response

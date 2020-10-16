@@ -1,0 +1,18 @@
+openapi: "3.0.0"
+info:
+  version: 0.1.0
+  title: CV's backend applications api
+  description: >
+    API for CV application that can create & update CV's
+  license:
+    name: GPLv2
+    url: https://opensource.org/licenses/gpl-2.0.php
+
+paths:
+  $ref: "./paths/index.yaml"
+
+components:
+  schemas:
+    $ref: "./schemas/index.yml"
+  responses:
+    $ref: "./responses/index.yaml"

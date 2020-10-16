@@ -1,0 +1,8 @@
+cv:
+  $ref: "./cv.yml"
+education_history:
+  $ref: "./education_history.yml"
+employment_history:
+  $ref: "./employment_history.yml"
+person:
+  $ref: "./person.yml"

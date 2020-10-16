@@ -1,0 +1,22 @@
+get:
+  tags:
+    - CV
+  description: List of cv's
+  responses:
+    200:
+      $ref: '../responses/index.yaml#/200'
+post:
+  tags:
+    - CV
+  description: Create cv
+  requestBody:
+    content:
+      application/json:
+        schema:
+          $ref: '../schemas/index.yml#/cv'
+      application/xml:
+        schema:
+          $ref: '../schemas/index.yml#/cv'
+  responses:
+    200:
+      $ref: '../responses/index.yaml#/200'

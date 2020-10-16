@@ -1,0 +1,9 @@
+/site/ping:
+  get:
+    description: Ping
+    responses:
+      200:
+        $ref: '../responses/index.yaml#/200'
+
+/cv:
+  $ref: './cv.yml'
