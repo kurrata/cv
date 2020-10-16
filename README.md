@@ -29,5 +29,8 @@ Application that manages CV's
 > docker-compose run php composer install -d '/app_b/'
 
 ## Utilities
-Build OpenAPI 3 yaml file for swagger
-> docker-compose run swagger-cli swagger-cli bundle /app_b/api/modules/v1/documentation/openapi3.yml --outfile /app_b/api/modules/v1/documentation/_build/openapi3.yaml --type yaml
+Build OpenAPI 3 yml file for swagger
+> docker-compose run swagger-cli swagger-cli bundle /app_b/api/modules/v1/documentation/openapi3.yml --outfile /app_b/api/web/openapi3.yml --type yaml
+
+Swagger UI with generated documentation. Url may be different if you changed default .env values
+> localhost:20080/v1
