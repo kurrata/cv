@@ -5,6 +5,7 @@
     "homepage": "http://www.yiiframework.com/",
     "type": "project",
     "license": "BSD-3-Clause",
+    "prefer-stable": true,
     "support": {
         "issues": "https://github.com/yiisoft/yii2/issues?state=open",
         "forum": "http://www.yiiframework.com/forum/",
@@ -14,12 +15,15 @@
     },
     "minimum-stability": "dev",
     "require": {
-        "php": ">=5.6.0",
+        "php": ">=7.3.0",
         "yiisoft/yii2": "~2.0.14",
         "yiisoft/yii2-bootstrap": "~2.0.0",
-        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0"
+        "yiisoft/yii2-swiftmailer": "~2.0.0 || ~2.1.0",
+
+        "symfony/dotenv": "@stable"
     },
     "require-dev": {
+        "roave/security-advisories": "dev-master",
         "yiisoft/yii2-debug": "~2.1.0",
         "yiisoft/yii2-gii": "~2.1.0",
         "yiisoft/yii2-faker": "~2.0.0",
